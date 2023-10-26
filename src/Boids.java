@@ -13,8 +13,8 @@ public class Boids {
     final double SEPARATION_DISTANCE= 30;
     final double FOLLOW_DISTANCE = 90;
     final double SEPARATION_FACTOR = 1;
-    final double ALIGNMENT_FACTOR = 0.5;
-    final double COHESION_FACTOR = 0.5;
+    final double ALIGNMENT_FACTOR = 0.7;
+    final double COHESION_FACTOR = 0.7;
     final int MIN_VEL = 100;
     final int MAX_VEL = 150;
 
