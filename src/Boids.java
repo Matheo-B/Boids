@@ -17,6 +17,7 @@ public class Boids {
     final double COHESION_FACTOR = 0.7;
     final int MIN_VEL = 100;
     final int MAX_VEL = 150;
+    final double SIZE = 10;
 
     long lastTime = System.nanoTime();
     ArrayList<Bird> birds;
@@ -31,18 +32,16 @@ public class Boids {
 
     public void createBirds(){
         Color c;
-        double size;
         Vector2d posVec= new Vector2d(0,0);
         Vector2d velVec = new Vector2d(0, 0);
         Bird b;
         for (int i = 0; i < this.NUMBER_OF_BIRDS; ++i){
             c = new Color((int)(this.random.nextDouble() * 0x1000000));
-            size = 10;
             posVec.set(this.random.nextInt(this.width), this.random.nextInt(this.height));
             double rx = (this.random.nextDouble()-0.5)*1.75*this.MAX_VEL;
             double ry = (this.random.nextDouble()-0.5)*1.75*this.MIN_VEL;
             velVec.set(rx, ry);
-            b = new Bird(posVec.copy(), velVec.copy(), c, size);
+            b = new Bird(posVec.copy(), velVec.copy(), c, this.SIZE);
             this.birds.add(b);
         }
     }

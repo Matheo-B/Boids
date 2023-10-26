@@ -9,7 +9,8 @@ public class Main implements ActionListener {
 
     final int HEIGHT = 700;
     final int WIDTH = 700;
-    int msTimeStep = 1000/60;
+    final int frameRate = 60;
+    final int msTimeStep = 1000/frameRate;
 
 
     public Main(){
